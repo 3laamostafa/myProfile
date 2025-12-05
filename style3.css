@@ -1,0 +1,605 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Almarai:wght@300;400;700;800&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Baloo+Bhaijaan+2:wght@400..800&family=Beiruti:wght@200..900&family=Cairo:wght@200..1000&family=Changa:wght@200..800&family=El+Messiri:wght@400..700&family=Fustat:wght@200..800&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Lalezar&family=Lateef:wght@200;300;400;500;600;700;800&family=Lemonada:wght@300..700&family=Mada:wght@200..900&family=Markazi+Text:wght@400..700&family=Rakkas&family=Readex+Pro:wght@160..700&family=Reem+Kufi:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Vazirmatn:wght@100..900&display=swap');
+/* جيبها من الموقع دا https://fonts.google.com/selection/embed */
+*{
+  font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0 ;
+    box-sizing:border-box;
+    scroll-behavior: smooth;
+}
+header{
+ background-color: rgb(0, 0, 0);  /* يضع لون خلفية أزرق فاتح جداً */
+position: fixed;              /* يثبت العنصر في مكانه عند التمرير */
+z-index: 999;                 /* يجعله فوق معظم العناصر الأخرى */
+display: flex;                /* يجعل العنصر حاوية flexbox */
+justify-content: space-between; /* يوزع المسافة بين العناصر الداخلية */
+align-items: center;          /* يمركز العناصر الداخلية عمودياً */
+padding: 20px 100px;          /* حشو داخلي: 20px أعلى/أسفل، 200px يمين/يسار */
+width: 100%;                 /* يحدد عرض العنصر */
+}
+.logo{
+text-decoration: none;    /* يزيل الخط التحتي من النص */
+color: blue;              /* يغير لون النص إلى أزرق */
+text-transform: uppercase; /* يحول كل الحروف إلى كبيرة (كابيتال) */
+font-weight: 700;         /* يجعل النص عريض (bold) */
+font-size: 1.8em;         /* يضبط حجم الخط ليكون 1.8 ضعف الحجم الأساسي */
+}
+.navigation a {
+text-decoration: none;      /* يزيل الخط التحتي من النص - مهم للروابط */
+color: blue;                /* يجعل لون النص أزرق */
+text-transform: uppercase;  /* يحول كل الحروف إلى كبيرة (كابيتال) */
+font-weight: 700;           /* يجعل النص عريض (bold) - 700 = bold */
+font-size: 1.1em;           /* يضبط حجم الخط ليكون 1.1 ضعف حجم العنصر الأب */
+padding-left: 30px;         /* يضيف مسافة داخلية من اليسار بمقدار 30 بكسل */
+}
+.navigation a:hover{  /* تأثير عند المرور */
+color: rgb(86, 100, 230);
+}
+section { 
+padding: 100px 200px;
+}
+.main{
+width: 100%;
+min-height: 100vh;
+display: flex;
+align-items: center;
+background: url(3laa.jpeg) no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;/* تأثير لجعل الصوره ثابته */
+}
+.main h2{
+  color: antiquewhite;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+.main h3 {
+  margin-top: 10px;
+  color: rgb(22, 87, 200);
+  font-size: 3em;
+  font-weight: 600;
+}
+.main h4 {
+  color: rgb(240, 240, 240);
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom:  30px;
+}
+.main-btn{
+  color: aliceblue;
+  background-color: blue;
+  text-decoration: none;
+  font-size: 1.4em;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.9375em 2.1875em;
+ letter-spacing: 1px;
+ border-radius: 15px;
+ margin-bottom: 40px;
+transition: 0.7s ease;
+}
+.main-btn:hover{
+  background-color: rgb(97, 97, 152);
+  transform: scale(1.1);
+}
+.social-icons {
+  color: aliceblue; /* لون الأيقونات */
+  font-size: 1.4em; /* حجم الأيقونات */
+  display: flex; /* لتنسيق الأيقونات بجانب بعض */
+  gap: 20px; /* المسافة بين كل أيقونة */
+  
+}
+.social-icons a:hover {
+  color: #ff6f61;
+  transform: scale(1.2);
+  transition: 0.7s;
+}
+.title{
+  display: flex;
+  justify-content:  center;
+  font-size: 2.2em;
+  font-weight: 500;
+  color: blue;
+  margin-bottom: 30px;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card{
+  background-color: aliceblue;
+  width: 21.1em;
+box-shadow: 0 5px 25px rgba(1, 1, 1, 0.15);
+/* 1️⃣ معنى كل جزء:
+
+box-shadow: horizontal vertical blur color;
+
+horizontal offset (0)
+
+القيمة الأولى هي الإزاحة الأفقية للظل.
+
+0 معناها أن الظل ليس له تحريك لليمين أو اليسار، يظل تحت البطاقة مباشرة.
+
+vertical offset (5px)
+
+القيمة الثانية هي الإزاحة الرأسية للظل.
+
+5px معناها أن الظل يظهر أسفل العنصر بمقدار 5 بيكسل.
+
+blur radius (25px)
+
+القيمة الثالثة هي تنعيم أو تشويش الظل.
+
+25px يجعل حواف الظل ناعمة وممتدة تدريجيًا، وليس حادة.
+
+color (rgba(1, 1, 1, 0.15))
+
+اللون يستخدم صيغة rgba:
+
+r = 1, g = 1, b = 1 → تقريبا أسود جداً خفيف.
+
+a = 0.15 → الشفافية، 0.15 يعني الظل خفيف جدًا، ليس أسود غامق. */
+  border-radius: 10px;
+  padding: 25px;
+  margin: 15px;
+transition: 0.5s ease;
+}
+.card:hover{
+  transform: scale(1.1);
+
+}
+.icon {
+  color: blue;
+  font-size: 8em ;
+  text-align: center;
+}
+.info{
+  text-align: center;
+}
+.info h3 {
+  color: rgb(100, 100, 211);
+  font-size: 1.2em;
+  font-weight:500 ;
+  margin-bottom:10px ;
+}
+
+
+
+
+footer{
+  background-color: black;
+  color: azure;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+
+}
+.footer-title{
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.footer-title span {
+  color: blue;
+}
+
+.information {
+  padding: 40px;
+  background-color: #f5f7fb; /* خلفية خارجية خفيفة */
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+.content-about {
+  display: flex;
+  gap: 40px;
+  background: #fff;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  align-items: flex-start;
+}
+
+/* Left & Right columns */
+.left {
+  flex: 0 0 360px; /* ثابت تقريبًا */
+}
+
+.right {
+  flex: 1; /* ياخذ الباقي */
+}
+/* 1️⃣ شرح الـ .left
+flex: 0 0 360px;
+
+
+ده معناه 3 حاجات:
+
+✔️ الجزء الأول: flex-grow: 0
+
+يعني:
+
+ما تكبرش…
+حتى لو في مساحة فاضية في الصفحة.
+
+✔️ الجزء الثاني: flex-shrink: 0
+
+يعني:
+
+ما تصغّرش…
+حتى لو الشاشة صغرت.
+
+✔️ الجزء الثالث: flex-basis: 360px
+
+وده الأهم، معناه:
+
+خليك عرضك ثابت = 360px
+
+🟦 زي صورة بروفايل ثابتة حجمها 360px مهما حصل.
+
+2️⃣ شرح الـ .right
+flex: 1;
+
+
+الكود ده مختصر للآتي:
+
+flex-grow: 1
+
+flex-shrink: 1
+
+flex-basis: 0
+
+معناه إيه؟
+
+خُد كل المساحة المتبقية بعد ما العمود اليسار ياخد 360px.
+
+🟩 يعني الجزء اليمين “مرن” وبيكبر ويصغر حسب عرض الشاشة.*/
+
+/* 🟩 مثال بسيط جدًا
+
+لو عندك هيكل HTML كده:
+
+<div class="container">
+  <div class="left">الشمال</div>
+  <div class="right">اليمين</div>
+</div>
+
+
+إنت كده عندك 2 ديف، طبيعي ينزلوا تحت بعض.
+
+لكن بمجرد ما تعمل:
+
+.container {
+  display: flex;
+}
+
+
+❗ يحصل الآتي:
+
+الـ left يقف على الشمال
+
+الـ right يقف على اليمين
+
+الاتنين جنب بعض في صف واحد
+
+خلصت — بقت عمودين.
+
+🟧 طيب ليه؟ وإزاي Flex عمل كده؟
+
+Flex عنده طريقة معينة لترتيب العناصر:
+
+💠 flex-direction: row (الافتراضي)
+
+يعني:
+
+رُص العناصر جنب بعض في صف أفقي.
+
+وبما إن ده هو الـ default،
+انت مش محتاج تكتبه.
+
+🔥 طب إزاي أتحكم في عرض كل عمود؟
+1️⃣ العمود الشمال ثابت
+.left {
+  width: 300px;
+}
+
+
+أو:
+
+.left {
+  flex: 0 0 300px;
+}
+
+
+يعني:
+
+خليك ثابت 300px مهما حصل.
+
+2️⃣ العمود اليمين يتمدّد
+.right {
+  flex: 1;
+}
+
+
+يعني:
+
+خُد كل المساحة المتبقية.
+
+🎨 النتيجة
+|  left (ثابت)  |                   right (متمدّد)                  |
+
+
+بالظبط زي اللي انت عامله في الـ About. */
+.inform-img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+  margin-bottom: 20px;
+}
+
+.inform-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.skill h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.skill-item {
+  margin-bottom: 18px;
+}
+
+.skill-title {
+  font-size: 15px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar {
+  width: 100%;
+  height: 14px;
+  background: #ececec;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  width: 0%;
+  background: #1976ff; /* أزرق واضح */
+  border-radius: 8px 0 0 8px;
+  transition: width 0.8s ease;
+}
+.person p {
+  margin: 8px 0;
+  color: #222;
+}
+
+.person span {
+  color: #1976ff;
+  margin-left: 8px;
+}
+
+.about h2 {
+  font-size: 28px;
+  margin: 0 0 12px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.about h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #1976ff;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+.about p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+ .last{
+  padding: 70px;
+  background-color: #0943b6; /* خلفية خارجية خفيفة */
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+} 
+.cotent-contant{
+  display: flex;
+  gap: 70px;
+  background: #fff;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  align-items: flex-start;
+}
+.contant-lift{
+  flex: 0 0 400px; /* ثابت تقريبًا */
+}
+.contant-right{
+  flex: 1; /* ياخذ الباقي */
+}
+
+.last-btn{
+  color: aliceblue;
+  background-color: blue;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  display: inline-block;
+  padding: 0.9375em 2.1875em;
+ letter-spacing: 1px;
+ border-radius: 15px;
+ margin-bottom: 40px;
+transition: 0.7s ease;
+}
+.last-btn:hover{
+  background-color: rgb(97, 97, 152);
+  transform: scale(1.1);
+}
+.social-icons-contact{
+  color: aliceblue; /* لون الأيقونات */
+  font-size: 1.4em; /* حجم الأيقونات */
+  display: flex; /* لتنسيق الأيقونات بجانب بعض */
+  gap: 20px; /* المسافة بين كل أيقونة */
+  
+}
+.social-icons-contact a:hover {
+  color: #ff6f61;
+  transform: scale(1.2);
+  transition: 0.7s;
+}
+.Touch h2 {
+
+font-size: 2em;
+  font-weight: 600;
+margin-bottom: 30px;
+  margin-top: 30px;
+}
+.Touch p {
+
+font-size: 1.8em;
+  font-weight: 300;
+  margin-bottom: 30px
+}
+.massage h2 {
+  
+font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+ input {
+  width: 100%;
+  padding: 18px 20px;
+  font-size: 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  background: #fff;
+  outline: none;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+/* عند الضغط (Focus) */
+input:focus {
+  border-color: #0059ff;
+  box-shadow: 0 0 4px rgba(108, 160, 255, 0.4);
+}
+/* ====== Responsive for tablets ====== */
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 50px;
+  }
+
+  section {
+    padding: 80px 50px;
+  }
+
+  .main h2 {
+    font-size: 1.2em;
+  }
+  .main h3 {
+    font-size: 2.5em;
+  }
+  .main h4 {
+    font-size: 1.5em;
+  }
+
+  .cards .content {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .content-about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left, .contant-lift {
+    flex: 0 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .right, .contant-right {
+    flex: 0 0 100%;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .inform-img {
+    margin: 0 auto 20px;
+  }
+
+  .social-icons, .social-icons-contact {
+    justify-content: center;
+  }
+}
+
+/* ====== Responsive for mobile ====== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .navigation a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  .main h2 {
+    font-size: 1em;
+  }
+  .main h3 {
+    font-size: 2em;
+  }
+  .main h4 {
+    font-size: 1.2em;
+  }
+
+  .cards .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin: 15px 0;
+  }
+
+  .last .cotent-contant {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .Touch p {
+    font-size: 1.2em;
+  }
+  .massage h2 {
+    font-size: 1.5em;
+  }
+}
+
+
